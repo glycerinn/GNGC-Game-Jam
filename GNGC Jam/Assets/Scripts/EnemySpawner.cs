@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public EnemySO[] enemyTypes;
-    public GameObject enemyPrefab;
+    public GameObject[] enemyPrefabs;
     public Transform player;
     public float spawnDistance = 8f;
     public float spawnInterval = 2f;
@@ -43,9 +43,15 @@ public class EnemySpawner : MonoBehaviour
                 break;
         }
 
-        GameObject enemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+        GameObject enemy = Instantiate(
+            enemyPrefabs[Random.Range(0, enemyPrefabs.Length)], spawnPos, Quaternion.identity
+        );
 
         Enemy enemyScript = enemy.GetComponent<Enemy>();
-        enemyScript.enemyData = enemyTypes[Random.Range(0, enemyTypes.Length)];
+
+        if (enemyScript != null)
+        {
+            enemyScript.enemyData = enemyTypes[Random.Range(0, enemyTypes.Length)];
+        }
     }
 }
