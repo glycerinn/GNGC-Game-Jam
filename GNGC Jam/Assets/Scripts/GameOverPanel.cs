@@ -7,6 +7,7 @@ public class GameOverPanel : MonoBehaviour
 {
     public GameObject GamePanel;
     public TextMeshProUGUI resultText;
+    private bool isLoading = false;
 
     void Start()
     {
@@ -25,9 +26,12 @@ public class GameOverPanel : MonoBehaviour
         GamePanel.SetActive(true);
     }
 
-    public void backToSelect()
+    public void backtoMenu()
     {
-        Time.timeScale = 1f;
+        if (isLoading)
+        return;
+
+        isLoading = true;
         StartCoroutine(LoadNextLevel("Select Mission"));
     }
 

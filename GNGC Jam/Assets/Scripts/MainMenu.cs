@@ -6,6 +6,7 @@ public class MainMenu : MonoBehaviour
 {
     [Header("Scene")]
     public int nextSceneIndex = 1;
+    private bool isLoading = false;
 
     void Update()
     {
@@ -17,6 +18,10 @@ public class MainMenu : MonoBehaviour
 
         if (Input.anyKeyDown)
         {
+            if (isLoading)
+            return;
+
+            isLoading = true;
             StartCoroutine(LoadNextLevel());
         }
     }

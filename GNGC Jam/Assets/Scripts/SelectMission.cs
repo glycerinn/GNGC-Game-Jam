@@ -10,19 +10,32 @@ public class SelectMission : MonoBehaviour
     public Button Menubutton;
     public Button Creditsbutton;
     public GameObject creditsPanel;
+    private bool isLoading = false;
     
     public void onTutor()
     {
+        if (isLoading)
+        return;
+
+        isLoading = true;
         StartCoroutine(LoadNextLevel("Tutorial"));
     }
 
     public void onMission()
     {
+        if (isLoading)
+        return;
+
+        isLoading = true;
         StartCoroutine(LoadNextLevel("Game Scene"));
     }
 
     public void onMenu()
     {
+        if (isLoading)
+        return;
+
+        isLoading = true;
         StartCoroutine(LoadNextLevel("Main Menu"));
     }
 

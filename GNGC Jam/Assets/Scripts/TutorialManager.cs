@@ -7,6 +7,7 @@ public class TutorialManager : MonoBehaviour
 {
     public DialogueRunner dialogueRunner;
     public string nextScene = "Select Mission";
+    private bool isLoading = false;
 
     void Awake()
     {
@@ -32,6 +33,10 @@ public class TutorialManager : MonoBehaviour
 
     private IEnumerator ReturnCoroutine()
     {
+        if (isLoading)
+        yield break;
+
+        isLoading = true;
         yield return StartCoroutine(Transition.Instance.PlayTransition());
 
         SceneManager.LoadScene(nextScene);
