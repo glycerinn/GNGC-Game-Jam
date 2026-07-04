@@ -141,6 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af8f267852130e44a85c648f8f341b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpecialEnemy
+  spawner: {fileID: 0}
+  spawnIndex: 0
   firePoint: {fileID: 8655679379766182896}
   enemyBulletPrefab: {fileID: 8929684504296963283, guid: f6af5acff77e84c45b2781c333a6f1e5, type: 3}
   shootDelay: 1

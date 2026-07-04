@@ -141,4 +141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b48e24fdcdd20b42a6c48651d14bf86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FriendlyEnemy
+  spawner: {fileID: 0}
+  spawnIndex: 0
   enemyData: {fileID: 11400000, guid: 388472bfae5f7df48950a05fba4e708e, type: 2}

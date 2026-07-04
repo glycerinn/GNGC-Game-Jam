@@ -1,8 +1,17 @@
 ﻿title: GameDialogue
 ---
-Guide: Welcome to the mission.
-Guide: Defeat every enemy before they disappear.
-Guide: Good luck!
+
+<<portrait "neutral">>
+Guide: Hello there.
+
+<<portrait "wle">>
+Guide: Nice to see you!
+
+<<portrait "angry">>
+Guide: Don't shoot the friendly enemies!
+
+<<portrait "shocked">>
+Guide: Watch out!
 
 <<StartGame>>
 ===
