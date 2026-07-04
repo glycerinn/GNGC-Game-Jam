@@ -24,7 +24,7 @@ public class LevelManager2 : MonoBehaviour
     {
         enemySpawner.enabled = false;
         audioManager.playDialogueBGM();
-        dialogueRunner.StartDialogue("GameDialogue");
+        dialogueRunner.StartDialogue("GameDialogue2");
     }
 
     

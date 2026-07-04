@@ -24,7 +24,7 @@ public class LevelManager3 : MonoBehaviour
     {
         enemySpawner.enabled = false;
         audioManager.playDialogueBGM();
-        dialogueRunner.StartDialogue("GameDialogue");
+        dialogueRunner.StartDialogue("GameDialogue3");
     }
 
     
@@ -32,7 +32,7 @@ public class LevelManager3 : MonoBehaviour
     {
         Debug.Log("Gameplay enabled!");
         enemySpawner.enabled = true;
-        audioManager.playGameBGM();
+        audioManager.playBossBGM();
         gameTimer.StartTimer();
     }
 }
