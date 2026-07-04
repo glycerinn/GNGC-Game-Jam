@@ -105,8 +105,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 874a01cbad9574243b258c48a4a8332d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  lifeTime: 3
-  playerDamage: 1
+  spawner: {fileID: 0}
+  spawnIndex: 0
+  enemyData: {fileID: 0}
 --- !u!58 &-7744897782137816855
 CircleCollider2D:
   m_ObjectHideFlags: 0

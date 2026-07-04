@@ -8,7 +8,7 @@ public class BulletShoot : MonoBehaviour
     [Header("Shooting")]
     public GameObject bulletObj;
     public Transform bulletSpawn;
-    public float shootCooldown = 0.2f;
+    public float shootCooldown = 0.1f;
 
     private float currentCooldown;
 

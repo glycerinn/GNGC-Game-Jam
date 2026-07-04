@@ -1,13 +1,13 @@
 using System.Collections;
 using UnityEngine;
 
-public class SpecialEnemy : MonoBehaviour
+public class SpecialEnemy : EnemyBase
 {
     [Header("Attack")]
     public Transform firePoint;
     public GameObject enemyBulletPrefab;
 
-    public float shootDelay = 2f;
+    public float shootDelay = 1f;
 
     void Start()
     {
@@ -23,6 +23,7 @@ public class SpecialEnemy : MonoBehaviour
         Vector2 direction = (player.position - firePoint.position).normalized;
         bullet.GetComponent<EnemyBullet>().Initialize(direction);
 
+        FreeSpawnSpot();
         Destroy(gameObject);
     }
 }
