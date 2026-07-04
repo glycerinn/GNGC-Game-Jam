@@ -15,7 +15,7 @@ public class BulletShoot : MonoBehaviour
     [Header("Ammo")]
     public int maxBullets = 10;
     public int currentBullets;
-    public float reloadTime = 1f;
+    public float reloadTime = 0.67f;
 
     private bool isReloading;
     public Slider ammoSlider;

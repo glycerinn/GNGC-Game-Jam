@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0d13bed60c5a63409a07b0b04197ae5, type: 3}
   m_Name: Enemy3
   m_EditorClassIdentifier: Assembly-CSharp::EnemySO
-  maxHealth: 3
+  maxHealth: 2
   lifeTime: 2
   playerDamage: 1
   sprite: {fileID: 5601640854279746977, guid: 0f365a40d1ed33e48a45f88a467234ef, type: 3}

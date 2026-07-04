@@ -987,7 +987,7 @@ MonoBehaviour:
   enemySpawner: {fileID: 431729315}
   bulletShoot: {fileID: 1608584164}
   shieldController: {fileID: 436290872}
-  startingTime: 150
+  startingTime: 60
 --- !u!114 &486228657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2796,9 +2796,9 @@ MonoBehaviour:
   bulletObj: {fileID: 8929684504296963283, guid: 582f5c56d77a58746ac3fe1ce47a451f, type: 3}
   bulletSpawn: {fileID: 1608584166}
   shootCooldown: 0.1
-  maxBullets: 10
+  maxBullets: 6
   currentBullets: 0
-  reloadTime: 1
+  reloadTime: 0.5
   ammoSlider: {fileID: 1083027328}
 --- !u!212 &1608584165
 SpriteRenderer:
@@ -2887,7 +2887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a35cb87bd8560d459b280c937a3ae36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
-  maxHealth: 5
+  maxHealth: 6
   GamePanel: {fileID: 167499538}
   bulletShoot: {fileID: 1608584164}
   enemySpawner: {fileID: 431729315}
