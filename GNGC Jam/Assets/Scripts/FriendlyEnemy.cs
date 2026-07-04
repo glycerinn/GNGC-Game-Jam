@@ -8,6 +8,14 @@ public class FriendlyEnemy : EnemyBase, IDamageable
 
     private SpriteRenderer spriteRenderer;
 
+    private AudioManager audioManager;
+
+    public void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    }
+
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -48,6 +56,7 @@ public class FriendlyEnemy : EnemyBase, IDamageable
 
         if (health <= 0)
         {
+            audioManager.playEnemyDieSFX();
             FreeSpawnSpot();
             Destroy(gameObject);
         }

@@ -15,6 +15,7 @@ public class EnemySpawner : MonoBehaviour
 
     private float spawnTimer;
     private float difficultyTimer;
+    
 
     void Update()
     {

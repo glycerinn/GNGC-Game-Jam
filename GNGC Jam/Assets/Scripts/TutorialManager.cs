@@ -9,8 +9,11 @@ public class TutorialManager : MonoBehaviour
     public string nextScene = "Select Mission";
     private bool isLoading = false;
 
-    void Awake()
+    private AudioManager audioManager;
+
+    public void Awake()
     {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         dialogueRunner.AddCommandHandler("BacktoMission", () =>
         {
             Debug.Log("Command called!");
@@ -18,10 +21,12 @@ public class TutorialManager : MonoBehaviour
         });
 
         Debug.Log("Command registered");
-    }
+    } 
+
 
     void Start()
     {
+        audioManager.playDialogueBGM();
         dialogueRunner.StartDialogue("Tutorial");
     }
 

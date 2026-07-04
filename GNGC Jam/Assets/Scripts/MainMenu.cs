@@ -8,6 +8,18 @@ public class MainMenu : MonoBehaviour
     public int nextSceneIndex = 1;
     private bool isLoading = false;
 
+    private AudioManager audioManager;
+
+    public void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    }
+
+    void Start()
+    {
+        audioManager.playMainMenuBGM();
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Backspace))
@@ -22,6 +34,7 @@ public class MainMenu : MonoBehaviour
             return;
 
             isLoading = true;
+            audioManager.playLoginSFX();
             StartCoroutine(LoadNextLevel());
         }
     }

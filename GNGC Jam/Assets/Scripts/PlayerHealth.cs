@@ -12,6 +12,13 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     public Slider healthSlider;
 
+    private AudioManager audioManager;
+
+    public void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    }
+
     void Start()
     {
         health = maxHealth;
@@ -24,12 +31,14 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     public void takeDamage(float damage)
     {
+        audioManager.playHurtSFX();
         health -= damage;
         healthSlider.value = health;
         UpdateHealthUI();
 
         if (health <= 0)
         {
+            audioManager.playDatabaseSFX();
             bulletShoot.enabled = false;
             shieldController.enabled = false;
             enemySpawner.enabled = false;

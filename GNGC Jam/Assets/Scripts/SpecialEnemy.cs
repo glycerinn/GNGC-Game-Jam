@@ -9,6 +9,13 @@ public class SpecialEnemy : EnemyBase
 
     public float shootDelay = 1f;
 
+    private AudioManager audioManager;
+
+    public void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    } 
+
     void Start()
     {
         StartCoroutine(Shoot());
@@ -23,6 +30,7 @@ public class SpecialEnemy : EnemyBase
         Vector2 direction = (player.position - firePoint.position).normalized;
         bullet.GetComponent<EnemyBullet>().Initialize(direction);
 
+        audioManager.playEnemyDieSFX();
         FreeSpawnSpot();
         Destroy(gameObject);
     }
