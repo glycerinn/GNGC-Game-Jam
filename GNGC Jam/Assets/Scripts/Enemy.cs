@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour, IDamageable
+public class Enemy : EnemyBase, IDamageable
 {
     public EnemySO enemyData;
     public float health { get; set; }
@@ -26,19 +26,22 @@ public class Enemy : MonoBehaviour, IDamageable
 
         if (timer <= 0)
         {
-            GameObject.FindGameObjectWithTag("Player")
-                .GetComponent<IDamageable>()
-                .takeDamage(enemyData.playerDamage);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<IDamageable>().takeDamage(enemyData.playerDamage);
 
+            FreeSpawnSpot();
             Destroy(gameObject);
         }
     }
 
     public void takeDamage(float damage)
     {
+        Debug.Log($"Enemy HP before: {health}");
         health -= damage;
-
+        Debug.Log($"Enemy HP after: {health}");
         if (health <= 0)
+        {
+            FreeSpawnSpot();
             Destroy(gameObject);
+        }
     }
 }

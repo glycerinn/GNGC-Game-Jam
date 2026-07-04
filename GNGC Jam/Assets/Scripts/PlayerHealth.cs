@@ -4,6 +4,10 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour, IDamageable
 {
     public float maxHealth = 5;
+    public GameOverPanel GamePanel;
+    public BulletShoot bulletShoot;
+    public EnemySpawner enemySpawner;
+    public Shield shieldController;
     public float health { get; set; }
 
     public Slider healthSlider;
@@ -26,6 +30,11 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
         if (health <= 0)
         {
+            bulletShoot.enabled = false;
+            shieldController.enabled = false;
+            enemySpawner.enabled = false;
+            GamePanel.ShowLose();
+            Time.timeScale = 0f;
             Debug.Log("Player Died");
         }
     }

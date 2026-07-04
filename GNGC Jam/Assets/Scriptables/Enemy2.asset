@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Enemy2
   m_EditorClassIdentifier: Assembly-CSharp::EnemySO
   maxHealth: 1
-  lifeTime: 2
+  lifeTime: 1
   playerDamage: 1
   sprite: {fileID: 6188951069893892178, guid: 95dd676ee820c9a42939fa81864685da, type: 3}
