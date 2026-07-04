@@ -20,6 +20,13 @@ public class BulletShoot : MonoBehaviour
     private bool isReloading;
     public Slider ammoSlider;
 
+    private AudioManager audioManager;
+
+    public void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -59,6 +66,7 @@ public class BulletShoot : MonoBehaviour
             {
                 if (currentBullets > 0)
                 {
+                    audioManager.playShootSFX();
                     SpawnBullet(direction);
                     currentBullets--;
                     ammoSlider.value = currentBullets;

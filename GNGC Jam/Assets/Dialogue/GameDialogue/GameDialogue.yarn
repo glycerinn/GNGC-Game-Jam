@@ -2,16 +2,33 @@
 ---
 
 <<portrait "neutral">>
-Guide: Hello there.
-
-<<portrait "wle">>
-Guide: Nice to see you!
+Weird Internet Girl Hobo: Oh why hello there, delevoper? I think you’re in hurry because there will be an ongoing data breach hmm?
 
 <<portrait "angry">>
-Guide: Don't shoot the friendly enemies!
+Weird Internet Girl Hobo: Who am I? How could you forget? Y-you’ve developed me before! -and I look weird? You are the one who drew and gave me this avatar, you dummy!
 
-<<portrait "shocked">>
-Guide: Watch out!
+<<portrait "devious">>
+Weird Internet Girl Hobo: (Actually I’m the one who drew this, ehe~)
+
+<<portrait "neutral">>
+AiQii: Ah forget it, let me reintroduce myself. I’m AiQii! Your personal  AI girl-, I mean, computer helper, yeah. ..and I’ll be here to assist anytime you want!
+
+<<portrait "angry">>
+AiQii: Don’t say that you ain’t need me, I know you do! I-I can destroy those pesky viruses in a minute or so! ..but I actually can’t detect them properly, since they managed to damage my virus sensing ability.
+
+<<portrait "wle">>
+AiQii: But really, I think we can work together and resolve this problem in a way that benefits us both!
+
+<<portrait "neutral">>
+AiQii: I help you destroy those pesky viruses, and you help me navigate and defend me from them!
+
+AiQii: I’ll teach you quick, use your WASD keyboard to help me navigate those viruses, then I‘ll shoot them.. with a gun. A digital gun. Don’t ask me where did I even got one in the first place.
+
+<<portrait "devious">>
+AiQii: Oh what’s that? The shield? It’s used to protect me from those viruses who uses projectiles. They are attempting to destroy the anti-virus system (which is me), so you also need to protect me at all cost! To use the shield, control it using your mouse!
+
+<<portrait "neutral">>
+AiQii: Best of luck, developer. I believe that they have finally arrived!
 
 <<StartGame>>
 ===

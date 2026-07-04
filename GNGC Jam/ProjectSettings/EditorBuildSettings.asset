@@ -12,11 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Select Mission.unity
     guid: cc0cc0fe3f58d234f8f164c5dd4d7e5d
   - enabled: 1
-    path: Assets/Scenes/Tutorial.unity
-    guid: e26005e93247db842b6c4c07cfca5a17
-  - enabled: 1
     path: Assets/Scenes/Game Scene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: e26005e93247db842b6c4c07cfca5a17
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

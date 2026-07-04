@@ -7,6 +7,14 @@ public class GameOverPanel : MonoBehaviour
 {
     public GameObject GamePanel;
     public TextMeshProUGUI resultText;
+    private bool isLoading = false;
+
+    private AudioManager audioManager;
+
+    public void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    } 
 
     void Start()
     {
@@ -15,24 +23,32 @@ public class GameOverPanel : MonoBehaviour
 
     public void ShowWin()
     {
+        audioManager.playGameOverBGM();
         resultText.text = "YOU WIN!";
         GamePanel.SetActive(true);
     }
 
     public void ShowLose()
     {
+        audioManager.playGameOverBGM();
         resultText.text = "YOU LOSE!";
         GamePanel.SetActive(true);
     }
 
-    public void backToSelect()
+    public void backtoMenu()
     {
+        if (isLoading)
+        return;
+
+        isLoading = true;
+        audioManager.playClickSFX();
         Time.timeScale = 1f;
         StartCoroutine(LoadNextLevel("Select Mission"));
     }
 
     IEnumerator LoadNextLevel(string level)
     {
+        Debug.Log("test)");
         yield return StartCoroutine(Transition.Instance.PlayTransition());
 
         SceneManager.LoadScene(level);

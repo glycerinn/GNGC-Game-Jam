@@ -10,19 +10,37 @@ public class SelectMission : MonoBehaviour
     public Button Menubutton;
     public Button Creditsbutton;
     public GameObject creditsPanel;
-    
-    public void onTutor()
+    private bool isLoading = false;
+
+    private AudioManager audioManager;
+
+    public void Awake()
     {
-        StartCoroutine(LoadNextLevel("Tutorial"));
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    }
+
+    void Start()
+    {
+        audioManager.playDesktopBGM();
     }
 
     public void onMission()
     {
+        if (isLoading)
+        return;
+
+        isLoading = true;
+        audioManager.playClickSFX();
         StartCoroutine(LoadNextLevel("Game Scene"));
     }
 
     public void onMenu()
     {
+        if (isLoading)
+        return;
+
+        isLoading = true;
+        audioManager.playClickSFX();
         StartCoroutine(LoadNextLevel("Main Menu"));
     }
 

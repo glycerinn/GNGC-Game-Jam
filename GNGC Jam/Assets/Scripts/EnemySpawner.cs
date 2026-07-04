@@ -12,9 +12,11 @@ public class EnemySpawner : MonoBehaviour
     public float minimumSpawnInterval = 0.4f;
     public float intervalDecrease = 0.05f;
     public float difficultyIncreaseTime = 10f;
+    public int enemiesPerWave = 2;
 
     private float spawnTimer;
     private float difficultyTimer;
+    
 
     void Update()
     {
@@ -22,7 +24,13 @@ public class EnemySpawner : MonoBehaviour
 
         if (spawnTimer >= spawnInterval)
         {
-            SpawnEnemy();
+            int enemiesToSpawn = Random.Range(2, 5); // 2, 3, or 4
+
+            for (int i = 0; i < enemiesToSpawn; i++)
+            {
+                SpawnEnemy();
+            }
+
             spawnTimer = 0f;
         }
 
@@ -37,7 +45,6 @@ public class EnemySpawner : MonoBehaviour
 
     public void SpawnEnemy()
     {
-        // Collect all free spots
         List<int> freeSpots = new List<int>();
 
         for (int i = 0; i < 4; i++)
@@ -46,11 +53,9 @@ public class EnemySpawner : MonoBehaviour
                 freeSpots.Add(i);
         }
 
-        // No free spots
         if (freeSpots.Count == 0)
             return;
 
-        // Pick one free spot
         int side = freeSpots[Random.Range(0, freeSpots.Count)];
 
         Vector2 spawnPos = player.position;
@@ -74,11 +79,22 @@ public class EnemySpawner : MonoBehaviour
                 break;
         }
 
-        GameObject enemy = Instantiate(
-            enemyPrefabs[Random.Range(0, enemyPrefabs.Length)],
-            spawnPos,
-            Quaternion.identity
-        );
+        GameObject prefab;
+
+        if (FindObjectsByType<SpecialEnemy>(FindObjectsSortMode.None).Length > 0)
+        {
+            do
+            {
+                prefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
+            }
+            while (prefab.GetComponent<SpecialEnemy>() != null);
+        }
+        else
+        {
+            prefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
+        }
+
+        GameObject enemy = Instantiate(prefab, spawnPos, Quaternion.identity);
 
         occupiedSpots[side] = enemy;
 

@@ -8,6 +8,13 @@ public class Enemy : EnemyBase, IDamageable
 
     private SpriteRenderer spriteRenderer;
 
+    private AudioManager audioManager;
+
+    public void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    }
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -40,6 +47,7 @@ public class Enemy : EnemyBase, IDamageable
         Debug.Log($"Enemy HP after: {health}");
         if (health <= 0)
         {
+            audioManager.playEnemyDieSFX();
             FreeSpawnSpot();
             Destroy(gameObject);
         }
