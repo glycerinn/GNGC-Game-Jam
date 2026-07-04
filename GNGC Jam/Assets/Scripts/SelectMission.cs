@@ -24,16 +24,6 @@ public class SelectMission : MonoBehaviour
         audioManager.playDesktopBGM();
     }
 
-    public void onTutor()
-    {
-        if (isLoading)
-        return;
-
-        isLoading = true;
-        audioManager.playClickSFX();
-        StartCoroutine(LoadNextLevel("Tutorial"));
-    }
-
     public void onMission()
     {
         if (isLoading)

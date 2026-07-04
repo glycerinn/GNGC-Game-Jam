@@ -42,11 +42,13 @@ public class GameOverPanel : MonoBehaviour
 
         isLoading = true;
         audioManager.playClickSFX();
+        Time.timeScale = 1f;
         StartCoroutine(LoadNextLevel("Select Mission"));
     }
 
     IEnumerator LoadNextLevel(string level)
     {
+        Debug.Log("test)");
         yield return StartCoroutine(Transition.Instance.PlayTransition());
 
         SceneManager.LoadScene(level);

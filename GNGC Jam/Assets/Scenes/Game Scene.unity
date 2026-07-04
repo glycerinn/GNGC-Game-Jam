@@ -751,18 +751,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
   enemyTypes:
   - {fileID: 11400000, guid: a4b28ee49b2400d4594be05bd64bd79f, type: 2}
-  - {fileID: 11400000, guid: 31f014fd07c52ac4eb456f479400bc2f, type: 2}
-  - {fileID: 11400000, guid: 820a46560e099c844af11e41a19c7920, type: 2}
   enemyPrefabs:
   - {fileID: 7116752659073346144, guid: e603f4d58cf9375438e717359c4a0697, type: 3}
   - {fileID: 7116752659073346144, guid: bfed31d6cf9320a42a9c2b5b55f9f7f3, type: 3}
-  - {fileID: 7116752659073346144, guid: f999f1d6b8473d7468dc6250abb89f6b, type: 3}
   player: {fileID: 1608584166}
   spawnDistance: 4
   spawnInterval: 2
   minimumSpawnInterval: 0.4
   intervalDecrease: 0.05
   difficultyIncreaseTime: 10
+  enemiesPerWave: 2
 --- !u!4 &431729316
 Transform:
   m_ObjectHideFlags: 0
@@ -1469,7 +1467,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 167499538}
         m_TargetAssemblyTypeName: GameOverPanel, Assembly-CSharp
-        m_MethodName: backToSelect
+        m_MethodName: backtoMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
