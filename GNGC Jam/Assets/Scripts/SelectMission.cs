@@ -5,8 +5,9 @@ using System.Collections;
 
 public class SelectMission : MonoBehaviour
 {
-    public Button Tutorialbutton;
     public Button Missionbutton;
+    public Button Missionbutton2;
+    public Button Missionbutton3;
     public Button Menubutton;
     public Button Creditsbutton;
     public GameObject creditsPanel;
@@ -22,6 +23,10 @@ public class SelectMission : MonoBehaviour
     void Start()
     {
         audioManager.playDesktopBGM();
+
+        Missionbutton.interactable = true;
+        Missionbutton2.interactable = PlayerPrefs.GetInt("Mission2Unlocked", 0) == 1;
+        Missionbutton3.interactable = PlayerPrefs.GetInt("Mission3Unlocked", 0) == 1;
     }
 
     public void onMission()
@@ -30,8 +35,35 @@ public class SelectMission : MonoBehaviour
         return;
 
         isLoading = true;
+
+        PlayerPrefs.SetInt("Mission2Unlocked", 1);
+        PlayerPrefs.Save();
+
         audioManager.playClickSFX();
         StartCoroutine(LoadNextLevel("Game Scene"));
+    }
+
+    public void onMission2()
+    {
+        if (isLoading)
+        return;
+
+        isLoading = true;
+        PlayerPrefs.SetInt("Mission3Unlocked", 1);
+        PlayerPrefs.Save();
+        
+        audioManager.playClickSFX();
+        StartCoroutine(LoadNextLevel("Game Scene 2"));
+    }
+
+    public void onMission3()
+    {
+        if (isLoading)
+        return;
+
+        isLoading = true;
+        audioManager.playClickSFX();
+        StartCoroutine(LoadNextLevel("Game Scene 3"));
     }
 
     public void onMenu()

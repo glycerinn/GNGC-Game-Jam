@@ -467,11 +467,23 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 72509736}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 850525746}
+        m_TargetAssemblyTypeName: SelectMission, Assembly-CSharp
+        m_MethodName: onMission2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &72509736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1768,8 +1780,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 708b071261dee2144958365d9f20c6ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectMission
-  Tutorialbutton: {fileID: 0}
   Missionbutton: {fileID: 4941131}
+  Missionbutton2: {fileID: 72509735}
+  Missionbutton3: {fileID: 1012066400}
   Menubutton: {fileID: 1825628379}
   Creditsbutton: {fileID: 1174993209}
   creditsPanel: {fileID: 2056969066}
@@ -1851,11 +1864,23 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1012066401}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 850525746}
+        m_TargetAssemblyTypeName: SelectMission, Assembly-CSharp
+        m_MethodName: onMission3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1012066401
 MonoBehaviour:
   m_ObjectHideFlags: 0

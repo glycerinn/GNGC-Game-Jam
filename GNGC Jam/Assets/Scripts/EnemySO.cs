@@ -10,4 +10,6 @@ public class EnemySO : ScriptableObject
 
     [Header("Visuals")]
     public Sprite sprite;
+
+    public AnimatorOverrideController animationOverride;
 }

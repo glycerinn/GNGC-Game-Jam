@@ -9,6 +9,7 @@ public class Enemy : EnemyBase, IDamageable
     private SpriteRenderer spriteRenderer;
 
     private AudioManager audioManager;
+    private Animator animator;
 
     public void Awake()
     {
@@ -17,14 +18,18 @@ public class Enemy : EnemyBase, IDamageable
 
     void Start()
     {
+        animator = GetComponent<Animator>();
+
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        Debug.Log(enemyData);
         health = enemyData.maxHealth;
         timer = enemyData.lifeTime;
 
         if (enemyData.sprite != null)
             spriteRenderer.sprite = enemyData.sprite;
+
+        if (enemyData.animationOverride != null)
+            animator.runtimeAnimatorController = enemyData.animationOverride;
     }
 
     void Update()

@@ -15,4 +15,5 @@ MonoBehaviour:
   maxHealth: 3
   lifeTime: 2
   playerDamage: 1
-  sprite: {fileID: -3855900064470187131, guid: 6b174fe047b13f946a2b0abdcd294990, type: 3}
+  sprite: {fileID: 5601640854279746977, guid: 0f365a40d1ed33e48a45f88a467234ef, type: 3}
+  animationOverride: {fileID: 22100000, guid: ba324865ca2a6e5428db664330620e2e, type: 2}

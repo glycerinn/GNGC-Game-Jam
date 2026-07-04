@@ -1,0 +1,25 @@
+﻿title: GameDialogue2
+---
+
+<<portrait "wle">>
+AiQii: What a blast, We did the impossible! Actually don’t celebrate too quickly.
+
+<<portrait "neutral">>
+AiQii: Oh, developer, I think you have to be careful.
+
+AiQii: I know my sensing is weak, but I believe that they are going to send viruses that detonates if I shoot them. It will harm the database severely if they are happened to be in my firing line.
+
+<<portrait "angry">>
+AiQii: So keep your focus up and beware your trigger finger!
+
+<<portrait "neutral">>
+AiQii: This is also the last wave, so keep up the spirit, developer.
+
+<<portrait "devious">>
+AiQii: After we win this, I can be your little AI girlfriend if you want~
+
+<<portrait "wle">>
+AiQii: N-no?! Ah shucks, at least I tried.
+
+<<StartGame3>>
+===

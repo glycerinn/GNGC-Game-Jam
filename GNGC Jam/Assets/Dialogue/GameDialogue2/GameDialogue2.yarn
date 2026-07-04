@@ -1,0 +1,23 @@
+﻿title: GameDialogue2
+---
+
+<<portrait "wle">>
+AiQii: Ah, that’s quite chaotic, but there will be more to come!
+
+<<portrait "neutral">>
+AiQii: I can sense it a bit, I think they are sending more virus variations. One of them are faster and one of them are stronger.
+
+<<portrait "wle">>
+AiQii: What do I mean, you ask? Simply like this, there’s one of them are faster at attacking our database, while there’s need more than one shot to eliminate them.
+
+<<portrait "angry">>
+AiQii: But seriosly, what are they even aftering in our database?
+
+<<portrait "shocked">>
+AiQii: Wh-what? O-oh.. I- I think I should’ve not asked about it.
+
+<<portrait "neutral">>
+AiQii: But once again, please guide me. This is for your database and my safety afterall!
+
+<<StartGame2>>
+===
